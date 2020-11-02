@@ -1,0 +1,133 @@
+*{
+    box-sizing:border-box;
+    
+}
+body{
+    background-color:linen;
+    font-family:sans-serif;
+    margin:0;
+    padding:0;
+}
+.navbar{
+    display:flex;
+    position:relative;
+    justify-content: space-around;
+    align-items:center;
+    background-color:#660D2B;
+    color:white;
+}
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.navbar-links {
+    height: 100%;
+}
+.navbar-links ul{
+    display:flex;
+    margin:0;
+    padding:0;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+.navbar-links li:hover {
+    background-color:lightcoral;
+}
+h1{
+    text-align: center;
+}
+/* Menu section */
+.menu{
+    box-sizing:content-box;
+}
+
+ .list-Menu {
+     display:flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+ }
+
+ .image{
+    padding:5px;
+ }
+ .image img{
+    width:200px;
+    height:200px;
+    clip-path:circle();
+ }
+ p{
+     text-align: center;
+     padding:5px;
+     margin:5px;
+ }
+ 
+ .image:hover {
+    box-shadow:0 0 2px 0 #660D2B;
+    border-radius:100%;
+}
+.toggle-button{
+    position:absolute;
+    top:.75rem;
+    right:1rem;
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:30px;
+    height:21px;
+}
+.toggle-button .bar{
+    height:3px;
+    width:100%;
+    background-color:white;
+    border-radius:10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) { 
+    .toggle-button{
+        display:flex; 
+    }
+    .navbar-links{
+       display:none;
+       width:100%;
+    }
+    .navbar{
+        flex-direction:column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width:100%;
+        flex-direction:column;
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        display:flex;
+    }
+    .menu{
+        flex-direction:column;
+    }
+    .list-Menu{
+        flex-direction:column;
+        width:50%;
+       padding-left:15%;
+    }
+    h1{
+        flex-direction:column;
+        position:relative;
+        
+    }
+}
+
+     
